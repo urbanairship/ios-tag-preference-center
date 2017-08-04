@@ -1,0 +1,6 @@
+
+.DS_Store
+/docs
+xcuserdata/
+AirshipConfig.plist
+Pods/

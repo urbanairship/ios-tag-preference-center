@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>preferenceLabelFont</key>
+	<dict>
+		<key>fontName</key>
+		<string>Avenir Next</string>
+		<key>fontSize</key>
+		<string>17</string>
+	</dict>
+	<key>preferenceLabelColor</key>
+	<string>#5F6669</string>
+	<key>titleFont</key>
+	<dict>
+		<key>fontName</key>
+		<string>AvenirNext-Medium</string>
+		<key>fontSize</key>
+		<string>20</string>
+	</dict>
+	<key>titleColor</key>
+	<string>#5F6669</string>
+	<key>listColor</key>
+	<string>#EBE7E7</string>
+	<key>backgroundColor</key>
+	<string>#EBE7E7</string>
+	<key>cellSeparatorColor</key>
+	<string>#5F6669</string>
+	<key>cellBackgroundColor</key>
+	<string>#EBE7E7</string>
+	<key>cellSwitchOffTintColor</key>
+	<string>#C5C3C0</string>
+	<key>cellSwitchOnColor</key>
+	<string>#DFA425</string>
+	<key>closeButtonFont</key>
+	<dict>
+		<key>fontName</key>
+		<string>AvenirNext-Medium</string>
+		<key>fontSize</key>
+		<string>17</string>
+	</dict>
+	<key>closeButtonColor</key>
+	<string>#DFA425</string>
+</dict>
+</plist>
