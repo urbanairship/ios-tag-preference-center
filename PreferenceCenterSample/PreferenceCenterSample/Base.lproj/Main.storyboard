@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="kAq-90-fHz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F2073" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="kAq-90-fHz">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -14,7 +14,7 @@
         <!--Notification Subscriptions-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="PreferenceCenterPODApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="PreferenceCenterSample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -80,19 +80,6 @@
                                 <color key="textColor" red="0.37169951200000001" green="0.39990988370000002" blue="0.412486136" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0F5-m4-BVW">
-                                <rect key="frame" x="68.5" y="612" width="238" height="43"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="238" id="fjh-JJ-tId"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="22"/>
-                                <state key="normal" title="Enable Notifications">
-                                    <color key="titleColor" red="0.88008719682693481" green="0.64714592695236206" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="enableNotifications:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wYy-T6-rgR"/>
-                                </connections>
-                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="No Subscriptions" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ny0-9a-SBs">
                                 <rect key="frame" x="12" y="105" width="155" height="168"/>
                                 <color key="backgroundColor" red="0.92188131809234619" green="0.90587538480758667" blue="0.90558689832687378" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -155,10 +142,8 @@
                             <constraint firstItem="2EO-5c-PdG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Tjr-dz-fJS"/>
                             <constraint firstItem="fWX-Ve-qeB" firstAttribute="top" secondItem="SUI-mf-5sl" secondAttribute="bottom" constant="-2.5" id="XdV-NN-YIp"/>
                             <constraint firstItem="3To-jB-1OS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dJR-mz-ZdW"/>
-                            <constraint firstItem="0F5-m4-BVW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fZ6-Jr-SAm"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fWX-Ve-qeB" secondAttribute="trailing" constant="-4" id="mVa-bm-2Rx"/>
                             <constraint firstItem="TBd-SQ-KzX" firstAttribute="top" secondItem="3To-jB-1OS" secondAttribute="bottom" constant="8" id="npC-sI-0QB"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0F5-m4-BVW" secondAttribute="bottom" constant="12" id="qUS-kj-Lsx"/>
                             <constraint firstAttribute="trailingMargin" secondItem="TT7-EY-5N3" secondAttribute="trailing" constant="-2" id="sy1-Gk-HJv"/>
                             <constraint firstAttribute="leadingMargin" secondItem="ny0-9a-SBs" secondAttribute="leading" constant="4" id="tZh-cf-nCi"/>
                             <constraint firstItem="I0Y-Sw-2sB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="tb7-80-BgP"/>
@@ -175,7 +160,6 @@
                         <outlet property="channelLabel" destination="e7C-qg-YGh" id="M9i-dx-YGK"/>
                         <outlet property="generalNewsButton" destination="TT7-EY-5N3" id="unZ-2V-mHp"/>
                         <outlet property="generalSubsTextView" destination="fWX-Ve-qeB" id="1B7-Nj-i2z"/>
-                        <outlet property="notificationButton" destination="0F5-m4-BVW" id="nLI-Ox-BHq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
