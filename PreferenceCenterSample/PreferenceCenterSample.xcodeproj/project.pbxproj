@@ -17,6 +17,7 @@
 		82AA2E701F02BD9E00C4DAE5 /* PreferenceCenterSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AA2E6F1F02BD9E00C4DAE5 /* PreferenceCenterSampleUITests.swift */; };
 		82AA2E811F03D04C00C4DAE5 /* GeneralNewsPrefsStyle.plist in Resources */ = {isa = PBXBuildFile; fileRef = 82AA2E7E1F03D04C00C4DAE5 /* GeneralNewsPrefsStyle.plist */; };
 		82AA2E821F03D04C00C4DAE5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AA2E7F1F03D04C00C4DAE5 /* MainViewController.swift */; };
+		A78A59261F38726F00401878 /* UITagNames.strings in Resources */ = {isa = PBXBuildFile; fileRef = A78A59281F38726F00401878 /* UITagNames.strings */; };
 		AF423607898752986911D5E2 /* Pods_PreferenceCenterSampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FCAA1EC9AE272B9227FE127 /* Pods_PreferenceCenterSampleTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 		82AA2E7D1F03CF6D00C4DAE5 /* PreferenceCenterSample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PreferenceCenterSample.entitlements; sourceTree = "<group>"; };
 		82AA2E7E1F03D04C00C4DAE5 /* GeneralNewsPrefsStyle.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GeneralNewsPrefsStyle.plist; sourceTree = "<group>"; };
 		82AA2E7F1F03D04C00C4DAE5 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		A78A59271F38726F00401878 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/UITagNames.strings; sourceTree = "<group>"; };
 		B80EB27ACE7B4813C1B98D81 /* Pods-PreferenceCenterSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PreferenceCenterSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PreferenceCenterSample/Pods-PreferenceCenterSample.debug.xcconfig"; sourceTree = "<group>"; };
 		BEBD55DB6131EF56562B490F /* Pods-PreferenceCenterSampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PreferenceCenterSampleUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PreferenceCenterSampleUITests/Pods-PreferenceCenterSampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BF2D25DC4C1DD78CFB17D6D6 /* Pods_PreferenceCenterSampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PreferenceCenterSampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				82AA2E4F1F02BD9D00C4DAE5 /* AppDelegate.swift */,
+				A78A59281F38726F00401878 /* UITagNames.strings */,
 				82AA2E7F1F03D04C00C4DAE5 /* MainViewController.swift */,
 				82AA2E7E1F03D04C00C4DAE5 /* GeneralNewsPrefsStyle.plist */,
 				82AA2E531F02BD9D00C4DAE5 /* Main.storyboard */,
@@ -296,6 +299,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A78A59261F38726F00401878 /* UITagNames.strings in Resources */,
 				82AA2E5A1F02BD9D00C4DAE5 /* LaunchScreen.storyboard in Resources */,
 				82AA2E811F03D04C00C4DAE5 /* GeneralNewsPrefsStyle.plist in Resources */,
 				82AA2E571F02BD9D00C4DAE5 /* Assets.xcassets in Resources */,
@@ -513,6 +517,14 @@
 				82AA2E591F02BD9D00C4DAE5 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A78A59281F38726F00401878 /* UITagNames.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A78A59271F38726F00401878 /* en */,
+			);
+			name = UITagNames.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

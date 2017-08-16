@@ -1,0 +1,13 @@
+/*
+ Copyright 2017 Urban Airship and Contributors
+ */
+
+// Main View
+"breakingWorld" = "World Events";
+"breakingSports" = "Sports Highlights";
+"breakingFinance" = "Financial Events";
+"breakingWeather" = "Weather Incidents";
+"worldNews" = "All News";
+"sports" = "Sports News";
+"finance" = "Financial News";
+"weather" = "Weather Updates";

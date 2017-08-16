@@ -278,4 +278,4 @@ curl -X POST -H "Content-Type: application/json" -H "Accept: application/vnd.urb
 ```
 
 ## Updating the Preference Center From a Push Notification
-You can update all or part of the preference center with the same key/value pairs as mentioned above. The only difference is the action key used, which is `ua_tag_preference_save_action`. It is recommended that you update through content-available silent pushes to avoid alerting the users unnecessarily.
+You can update all or part of the preference center with the same key/value pairs as mentioned above. The only difference is the action key used, which is `ua_tag_preference_save_action`. It's recommended that you update through content-available silent pushes to avoid alerting the users unnecessarily.

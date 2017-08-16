@@ -25,7 +25,6 @@ class MainViewController: UIViewController {
 
     @IBOutlet weak var breakingNewsButton: UIButton!
     @IBOutlet weak var generalNewsButton: UIButton!
-    @IBOutlet weak var notificationButton: UIButton!
     @IBOutlet weak var channelLabel: UILabel!
     @IBOutlet weak var channelButton: UIButton!
     @IBOutlet weak var breakingSubsTextView: UITextView!
@@ -38,8 +37,9 @@ class MainViewController: UIViewController {
         
         NotificationCenter.default.addObserver(
             self, selector: #selector(MainViewController.setup),
-            name: MainViewController.registeredChannelID,
-            object: nil);
+            name: NSNotification.Name(UAChannelCreatedEvent),
+            object: nil)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -60,13 +60,13 @@ class MainViewController: UIViewController {
             var generalNewsPrefs = [UATagPreference]()
             
             generalNewsPrefs.append(UATagPreference(tag: tagName.worldNews.rawValue,
-                                                    displayName: "All World News"))
+                                                    displayName: self.getDisplayName(tagName.worldNews.rawValue)))
             generalNewsPrefs.append(UATagPreference(tag: tagName.sports.rawValue,
-                                                    displayName: "All Sports News"))
+                                                    displayName: self.getDisplayName(tagName.sports.rawValue)))
             generalNewsPrefs.append(UATagPreference(tag: tagName.finance.rawValue,
-                                                    displayName: "All Financial News"))
+                                                    displayName: self.getDisplayName(tagName.finance.rawValue)))
             generalNewsPrefs.append(UATagPreference(tag: tagName.weather.rawValue,
-                                                    displayName: "Weather Updates"))
+                                                    displayName: self.getDisplayName(tagName.weather.rawValue)))
             tagPrefVC.preferences = generalNewsPrefs
             tagPrefVC.style = UATagPreferencesStyle(contentsOfFile: "GeneralNewsPrefsStyle")
             
@@ -78,10 +78,14 @@ class MainViewController: UIViewController {
     
     // this example styles the preference center directly
     @IBAction func showBreakingNewsPrefs(_ sender: Any) {
-        let breakingLocal = UATagPreference(tag: tagName.breakingWorld.rawValue, displayName: "World News")
-        let breakingSports = UATagPreference(tag: tagName.breakingSports.rawValue, displayName: "Sports Highlights")
-        let breakingFinance = UATagPreference(tag: tagName.breakingFinance.rawValue, displayName: "Worldwide Financial News")
-        let breakingWeather = UATagPreference(tag: tagName.breakingWeather.rawValue, displayName: "Major Weather Incidents")
+        let breakingLocal = UATagPreference(tag: tagName.breakingWorld.rawValue,
+                                            displayName: self.getDisplayName(tagName.breakingWorld.rawValue))
+        let breakingSports = UATagPreference(tag: tagName.breakingSports.rawValue,
+                                             displayName: self.getDisplayName(tagName.breakingSports.rawValue))
+        let breakingFinance = UATagPreference(tag: tagName.breakingFinance.rawValue,
+                                              displayName: self.getDisplayName(tagName.breakingFinance.rawValue))
+        let breakingWeather = UATagPreference(tag: tagName.breakingWeather.rawValue,
+                                              displayName: self.getDisplayName(tagName.breakingWeather.rawValue))
         
         let breakingStyle = UATagPreferencesStyle()
         
@@ -98,19 +102,16 @@ class MainViewController: UIViewController {
         breakingStyle.titleFont = UIFont(name: "AvenirNext-Medium", size: 20)
         breakingStyle.titleColor = UIColor(red:0.77, green:0.76, blue:0.75, alpha:1.00)
         
-        UATagPreferenceCenter.start(preferences: [breakingLocal, breakingSports, breakingFinance, breakingWeather], style: breakingStyle, title: "Breaking News Preferences")
+        UATagPreferenceCenter.start(preferences: [breakingLocal,
+                                                  breakingSports,
+                                                  breakingFinance,
+                                                  breakingWeather],
+                                    style: breakingStyle,
+                                    title: "Breaking News Preferences")
+        
     }
     
     // MARK: - View Setup
-    
-    @IBAction func enableNotifications(_ sender: Any) {
-        if UAirship.shared() == nil {
-            return
-        }
-        if !UAirship.push().userPushNotificationsEnabled {
-            UAirship.push().userPushNotificationsEnabled = true
-        }
-    }
     
     @IBAction func copyChannelID(_ sender: Any) {
         UIPasteboard.general.string = UAirship.push().channelID
@@ -125,27 +126,19 @@ class MainViewController: UIViewController {
     }
     
     func setup() {
-        if UAirship.shared() != nil {
-            if UAirship.push().channelID != nil {
-                self.breakingNewsButton.isEnabled = true
-                self.generalNewsButton.isEnabled = true
-                self.checkSubscriptions()
-            }
+        if UAirship.push().channelID != nil {
+            self.breakingNewsButton.isEnabled = true
+            self.generalNewsButton.isEnabled = true
+            self.channelLabel.isHidden = false
+            self.channelButton.isHidden = false
+            self.channelButton.setTitle(UAirship.push().channelID, for: .normal)
+            self.checkSubscriptions()
             
-            if UAirship.push().userPushNotificationsEnabled == true {
-                self.notificationButton.isHidden = true
-                self.channelLabel.isHidden = false
-                self.channelButton.isHidden = false
-            } else {
-                self.notificationButton.isHidden = false
-                self.channelLabel.isHidden = true
-                self.channelButton.isHidden = true
-            }
         } else {
-            self.channelLabel.isHidden = true
-            self.channelButton.isHidden = true
             self.breakingNewsButton.isEnabled = false
             self.generalNewsButton.isEnabled = false
+            self.channelLabel.isHidden = true
+            self.channelButton.isHidden = true
         }
     }
     
@@ -161,7 +154,7 @@ class MainViewController: UIViewController {
         
         for tag in list {
             if deviceTags.contains(tag) {
-                newsSubs += "\(self.getDisplayName(tag: tag))\n"
+                newsSubs += "\(self.getDisplayName(tag))\n"
             }
         }
         
@@ -172,27 +165,8 @@ class MainViewController: UIViewController {
         return newsSubs
     }
     
-    func getDisplayName(tag: String) -> String {
-        switch tag {
-        case tagName.breakingWorld.rawValue:
-            return "World Events"
-        case tagName.breakingSports.rawValue:
-            return "Sports Highlights"
-        case tagName.breakingFinance.rawValue:
-            return "Financial Events"
-        case tagName.breakingWeather.rawValue:
-            return "Weather Incidents"
-        case tagName.worldNews.rawValue:
-            return "All News"
-        case tagName.sports.rawValue:
-            return "Sports News"
-        case tagName.finance.rawValue:
-            return "Financial News"
-        case tagName.weather.rawValue:
-            return "Weather Updates"
-        default:
-            return "Unknown Tag"
-        }
+    func getDisplayName(_ tag: String) -> String {
+        return NSLocalizedString(tag, tableName: "UITagNames", comment: "Tag Preference Label")
     }
 }
 
