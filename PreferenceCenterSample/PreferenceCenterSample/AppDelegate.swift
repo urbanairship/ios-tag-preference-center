@@ -34,10 +34,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Set the icon badge to zero on startup (optional)
         UAirship.push()?.resetBadge()
         
-        // Set self as the UARegistrationDelegate to capture device registration
-        UAirship.push().registrationDelegate = self
-        
-        
         return true
     }
     
