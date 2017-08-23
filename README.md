@@ -61,7 +61,7 @@ let weatherPref = UATagPreference(tag: "weatherPref", displayName: "Weather", ta
 
 Start the preference center with your preferences. Also include a title to be shown then the view displays:
 ```swift
-UATagPreferences.start(preferences: [financePref,
+UATagPreferenceCenter.start(preferences: [financePref,
                                      sportsPref,
                                      worldNewsPref,
                                      weatherPref],
@@ -105,7 +105,7 @@ myStyle.cellSwitchOffTintColor = UIColor(red:0.44, green:0.40, blue:0.85, alpha:
 
 Include your custom style when starting the preference center:
 ```swift
-UATagPreferences.start(preferences: [financePref,
+UATagPreferenceCenter.start(preferences: [financePref,
                                      sportsPref,
                                      worldNewsPref,
                                      weatherPref],
@@ -166,7 +166,7 @@ prefCenter.start()
 **Note:** The preference center can be saved and updated outside of the app. It’s important to consider whether or not to allow any newer preferences to override your default values. Each call to open the preference center has an optional `preferSavedPreferences` parameter which defaults to `true` but will ignore saved preferences if set to `false`:
 
 ```swift
-UATagPreferences.start(preferences: [financePref,
+UATagPreferenceCenter.start(preferences: [financePref,
                                      sportsPref,
                                      worldNewsPref,
                                      weatherPref],
@@ -187,7 +187,7 @@ If you would like send push notifications to update or open the preference cente
 UAirship.takeOff(config)
 
 // create a preference action after takeOff
-UATagPreferences.registerAction()
+UATagPreferenceCenter.registerAction()
 ```
 
 You can also set a default `UATagPreferencesStyle` to use:
@@ -199,7 +199,7 @@ myStyle.preferenceLabelFont = UIFont(name: "Avenir Next", size: 17)
 myStyle.preferenceLabelColor = UIColor(red:0.87, green:0.64, blue:0.23, alpha:1.00)
 myStyle.closeButtonColor = UIColor(red:0.44, green:0.40, blue:0.85, alpha:1.00)
         
-UATagPreferences.registerAction(style: myStyle)
+UATagPreferenceCenter.registerAction(style: myStyle)
 ```
 
 ## Triggering a One-Off Preference Center From a Push Notification
