@@ -34,6 +34,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Set the icon badge to zero on startup (optional)
         UAirship.push()?.resetBadge()
         
+        // Enable push notifications
+        UAirship.push().userPushNotificationsEnabled = true
+        
         return true
     }
     
