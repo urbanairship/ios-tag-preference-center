@@ -37,9 +37,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Enable push notifications
         UAirship.push().userPushNotificationsEnabled = true
         
-        // Register the preference center action to allow preferences
-        // to be handled through push notifications
-        UATagPreferenceCenter.registerAction()
+        // Allow preferences to be handled through push notifications
+        
+        // create a default preference center style
+        let defaultStyle = UATagPreferencesStyle(contentsOfFile: "GeneralNewsPrefsStyle")
+        
+        // register the preference center action along with the default style
+        UATagPreferenceCenter.registerAction(style: defaultStyle)
         
         return true
     }
