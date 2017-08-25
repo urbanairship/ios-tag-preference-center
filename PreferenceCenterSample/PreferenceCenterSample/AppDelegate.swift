@@ -38,7 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UAirship.push().userPushNotificationsEnabled = true
         
         // Register the preference center action to allow preferences
-        // to be handled throug push notifications
+        // to be handled through push notifications
         UATagPreferenceCenter.registerAction()
         
         return true
