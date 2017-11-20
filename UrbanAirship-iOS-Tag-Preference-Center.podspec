@@ -19,5 +19,5 @@ Pod::Spec.new do |s|
   s.resources               = 'UATagPreferenceCenter/UATagPreferenceCenter/Resources/**/*'
 
   s.ios.frameworks          = 'UIKIT'
-  s.dependency              'UrbanAirship-iOS-SDK', '~> 8.5.1'
+  s.dependency              'UrbanAirship-iOS-SDK', '~> 8.5'
 end
