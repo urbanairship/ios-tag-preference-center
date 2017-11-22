@@ -33,6 +33,11 @@ open class UATagPreferencesViewController: UIViewController, UITableViewDelegate
     
     public var preferenceDeviceData: [(tagPreference: UATagPreference, hasTag: Bool)]?
     
+    /**
+     * (optional) prefer to use preferences that have been updated remotely (defaults to true)
+     */
+    public var preferSavedPreferences: Bool = true
+    
     var preferencesInternal: UATagPreferenceCenterInternal?
     
     var loadingAnimation = UIActivityIndicatorView(activityIndicatorStyle: .gray)
@@ -55,11 +60,12 @@ open class UATagPreferencesViewController: UIViewController, UITableViewDelegate
         super.init(nibName: "UATagPreferencesViewController", bundle: UATagPreferenceCenter.getResourceBundle())
     }
     
-    convenience public init(preferences: [UATagPreference], style: UATagPreferencesStyle = UATagPreferencesStyle(), title: String?) {
+    convenience public init(preferences: [UATagPreference], style: UATagPreferencesStyle = UATagPreferencesStyle(), title: String?, preferSavedPreferences: Bool = true) {
         self.init()
         self.preferences = preferences
         self.style = style
         self.preferencesTitle = title
+        self.preferSavedPreferences = preferSavedPreferences
         self.setup()
     }
     
@@ -103,6 +109,12 @@ open class UATagPreferencesViewController: UIViewController, UITableViewDelegate
         self.preferencesTable.separatorColor = self.style.cellSeparatorColor
         
         self.startLoadAnimation()
+        
+        if self.preferSavedPreferences {
+            if let finalizedPrefs = UATagPreferenceDataHandler.finalizePreferences(preferences: self.preferences, style: self.style, title: self.title, useSavedPreferences: self.preferSavedPreferences) {
+                self.preferences = finalizedPrefs.preferences
+            }
+        }
         
         if let _ = self.preferencesInternal {
             self.preferencesInternal!.getTagData()
