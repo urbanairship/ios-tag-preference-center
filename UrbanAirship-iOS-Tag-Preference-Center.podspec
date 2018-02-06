@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.version                 = "1.1.0"
+  s.version                 = "1.2.0"
   s.name                    = "UrbanAirship-iOS-Tag-Preference-Center"
   s.summary                 = "Tag based preference center using the Urban Airship SDK"
 
@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.source                  = { :git => 'https://github.com/urbanairship/ios-tag-preference-center.git', :tag => s.version.to_s }
 
   s.module_name             = "UATagPreferenceCenter"
-  s.ios.deployment_target   = "8.0"
+  s.ios.deployment_target   = "9.0"
   s.requires_arc            = true
 
   s.source_files            = 'UATagPreferenceCenter/UATagPreferenceCenter/Classes/**/*'
@@ -19,5 +19,5 @@ Pod::Spec.new do |s|
   s.resources               = 'UATagPreferenceCenter/UATagPreferenceCenter/Resources/**/*'
 
   s.ios.frameworks          = 'UIKIT'
-  s.dependency              'UrbanAirship-iOS-SDK', '~> 8.5'
+  s.dependency              'UrbanAirship-iOS-SDK', '~> 9.0'
 end
