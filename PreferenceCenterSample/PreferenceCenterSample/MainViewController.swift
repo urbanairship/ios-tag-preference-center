@@ -115,17 +115,12 @@ class MainViewController: UIViewController {
     
     @IBAction func copyChannelID(_ sender: Any) {
         UIPasteboard.general.string = UAirship.push().channelID
-        let message = UAInAppMessage()
-        message.alert = "Copied To Clipboard"
-        message.position = UAInAppMessagePosition.bottom
-        message.duration = 1.5
-        message.primaryColor = UIColor(red:0.18, green:0.18, blue:0.18, alpha:1.00)
-        message.secondaryColor = UIColor(red:0.77, green:0.76, blue:0.75, alpha:1.00)
         
-        UAirship.inAppMessaging().display(message)
+        let alertController = UIAlertController(title: "Copied", message: "Copied Channel ID to clipboard.", preferredStyle: .alert)
+        self.present(alertController, animated: true, completion: nil)
     }
     
-    func setup() {
+    @objc func setup() {
         if UAirship.push().channelID != nil {
             self.breakingNewsButton.isEnabled = true
             self.generalNewsButton.isEnabled = true

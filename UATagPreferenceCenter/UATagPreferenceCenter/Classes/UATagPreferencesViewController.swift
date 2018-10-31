@@ -40,7 +40,7 @@ open class UATagPreferencesViewController: UIViewController, UITableViewDelegate
     
     var preferencesInternal: UATagPreferenceCenterInternal?
     
-    var loadingAnimation = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+    var loadingAnimation = UIActivityIndicatorView(style: .gray)
     var isLoadingComplete = false
     
     static let defaultTitle = "Notification Preferences"

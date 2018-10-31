@@ -1,0 +1,11 @@
+use_frameworks!
+
+def tag_preference_center
+  platform :ios, '10.0'
+  pod 'UrbanAirship-iOS-SDK'
+end
+
+target 'UATagPreferenceCenter' do
+  tag_preference_center
+end
+

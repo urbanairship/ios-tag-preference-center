@@ -4,7 +4,7 @@ target 'PreferenceCenterSample' do
 
   # Pods for PreferenceCenterSample
   pod 'UrbanAirship-iOS-Tag-Preference-Center', :path => '..'
-  pod 'UrbanAirship-iOS-SDK', '~> 8.5.1'
+  pod 'UrbanAirship-iOS-SDK'
 
   target 'PreferenceCenterSampleTests' do
     inherit! :search_paths
@@ -15,5 +15,16 @@ target 'PreferenceCenterSample' do
     inherit! :search_paths
     # Pods for testing
   end
-
 end
+
+# get rid of "Update to recommended settings" buildtime warning
+post_install do |installer|
+  installer.pods_project.build_configurations.each do |config|
+    if config.name == 'Release'
+      config.build_settings['SWIFT_OPTIMIZATION_LEVEL'] = '-Owholemodule'
+    else
+      config.build_settings['SWIFT_OPTIMIZATION_LEVEL'] = '-Onone'
+    end    
+  end 
+end
+
