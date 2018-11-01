@@ -90,8 +90,8 @@ public class UATagPreferencesStyle: NSCopying {
      */
     public var closeButtonColor: UIColor?
     
-    static let defaultFontName: String = "Helvetica Neue"
-    static let defaultFontSize: CGFloat = 17
+    public static let defaultFontName: String = "Helvetica Neue"
+    public static let defaultFontSize: CGFloat = 17
     
     private static let defaultFileName = "UATagPreferenceCenterStyle"
     
@@ -313,8 +313,8 @@ public class UATagPreferencesStyle: NSCopying {
                 
                 if let sizeString = styleFont[stylePropertyKeys.fontSize.rawValue] as? String {
                     if let sizeNumber = NumberFormatter().number(from: sizeString) {
-                        if CGFloat(sizeNumber) > 0 {
-                            fontSize = CGFloat(sizeNumber)
+                        if CGFloat(sizeNumber.doubleValue) > 0 {
+                            fontSize = CGFloat(sizeNumber.doubleValue)
                         }
                     }
                 }
@@ -369,7 +369,7 @@ public class UATagPreferencesStyle: NSCopying {
     private func convertHexToColor(hex: String) -> UIColor? {
         
         if hex != "" && hex.hasPrefix("#") {
-            let strippedHex = hex.substring(with: hex.index(hex.startIndex, offsetBy: 1)..<hex.endIndex)
+            let strippedHex = String(hex[hex.index(hex.startIndex, offsetBy: 1)..<hex.endIndex])
             return UIColor(hex: strippedHex)
         } else {
             NSLog("UAERROR: Invalid hex value provided: \(hex)")

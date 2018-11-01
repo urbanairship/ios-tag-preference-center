@@ -9,8 +9,7 @@
 /* Begin PBXBuildFile section */
 		821E2CCA1E65B28500D684BB /* UATagPreferencesStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821E2CC91E65B28500D684BB /* UATagPreferencesStyle.swift */; };
 		8229A0411E55CA2D005F226F /* UATagPreferenceCenter.h in Headers */ = {isa = PBXBuildFile; fileRef = 8229A0391E55CA2D005F226F /* UATagPreferenceCenter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8229A0421E55CA2D005F226F /* UATagPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8229A03A1E55CA2D005F226F /* UATagPreferences.swift */; };
-		8229A0431E55CA2D005F226F /* UATagPreferencesInternal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8229A03B1E55CA2D005F226F /* UATagPreferencesInternal.swift */; };
+		8229A0421E55CA2D005F226F /* UATagPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8229A03A1E55CA2D005F226F /* UATagPreference.swift */; };
 		8229A0441E55CA2D005F226F /* UATagPreferencesOpenAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8229A03C1E55CA2D005F226F /* UATagPreferencesOpenAction.swift */; };
 		8229A0451E55CA2D005F226F /* UATagPreferencesSaveAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8229A03D1E55CA2D005F226F /* UATagPreferencesSaveAction.swift */; };
 		8229A0471E55CA2D005F226F /* UATagPreferencesViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8229A03F1E55CA2D005F226F /* UATagPreferencesViewCell.swift */; };
@@ -19,15 +18,21 @@
 		8229A04D1E55CA53005F226F /* UATagPreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8229A04B1E55CA53005F226F /* UATagPreferencesViewController.xib */; };
 		825AEE761E8930BB00D7B7F7 /* UATagPreferencesDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825AEE751E8930BB00D7B7F7 /* UATagPreferencesDelegate.swift */; };
 		82E26E011E76BD25007EA1F0 /* UATagPreferenceCenterStyle.plist in Resources */ = {isa = PBXBuildFile; fileRef = 82E26E001E76BD25007EA1F0 /* UATagPreferenceCenterStyle.plist */; };
+		CCAD43D75A897273CD479B60 /* Pods_UATagPreferenceCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3CE740AB9AF46C98C3E54D2 /* Pods_UATagPreferenceCenter.framework */; };
+		DF43AE5D218A608600CF7F22 /* UATagPreferenceCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF43AE5C218A608600CF7F22 /* UATagPreferenceCellDelegate.swift */; };
+		DF43AE62218A609C00CF7F22 /* UATagPreferenceDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF43AE5E218A609C00CF7F22 /* UATagPreferenceDataHandler.swift */; };
+		DF43AE63218A609C00CF7F22 /* UATagPreferenceCenterInternal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF43AE5F218A609C00CF7F22 /* UATagPreferenceCenterInternal.swift */; };
+		DF43AE64218A609C00CF7F22 /* UATagPreferenceCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF43AE60218A609C00CF7F22 /* UATagPreferenceCenter.swift */; };
+		DF43AE65218A609C00CF7F22 /* UATagPreferenceCenterStringTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF43AE61218A609C00CF7F22 /* UATagPreferenceCenterStringTypes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E4E2DC3F5B1848AF9F8213E /* Pods-UATagPreferenceCenter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UATagPreferenceCenter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UATagPreferenceCenter/Pods-UATagPreferenceCenter.debug.xcconfig"; sourceTree = "<group>"; };
 		821E2CC91E65B28500D684BB /* UATagPreferencesStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UATagPreferencesStyle.swift; path = Classes/UATagPreferencesStyle.swift; sourceTree = "<group>"; };
 		8229A02D1E55C9B1005F226F /* UATagPreferenceCenter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UATagPreferenceCenter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8229A0311E55C9B1005F226F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8229A0391E55CA2D005F226F /* UATagPreferenceCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UATagPreferenceCenter.h; sourceTree = "<group>"; };
-		8229A03A1E55CA2D005F226F /* UATagPreferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UATagPreferences.swift; path = Classes/UATagPreferences.swift; sourceTree = "<group>"; };
-		8229A03B1E55CA2D005F226F /* UATagPreferencesInternal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UATagPreferencesInternal.swift; path = Classes/UATagPreferencesInternal.swift; sourceTree = "<group>"; };
+		8229A03A1E55CA2D005F226F /* UATagPreference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UATagPreference.swift; path = Classes/UATagPreference.swift; sourceTree = "<group>"; };
 		8229A03C1E55CA2D005F226F /* UATagPreferencesOpenAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UATagPreferencesOpenAction.swift; path = Classes/UATagPreferencesOpenAction.swift; sourceTree = "<group>"; };
 		8229A03D1E55CA2D005F226F /* UATagPreferencesSaveAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UATagPreferencesSaveAction.swift; path = Classes/UATagPreferencesSaveAction.swift; sourceTree = "<group>"; };
 		8229A03F1E55CA2D005F226F /* UATagPreferencesViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UATagPreferencesViewCell.swift; path = Classes/UATagPreferencesViewCell.swift; sourceTree = "<group>"; };
@@ -36,6 +41,13 @@
 		8229A04B1E55CA53005F226F /* UATagPreferencesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UATagPreferencesViewController.xib; path = UATagPreferenceCenter/Resources/UATagPreferencesViewController.xib; sourceTree = "<group>"; };
 		825AEE751E8930BB00D7B7F7 /* UATagPreferencesDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UATagPreferencesDelegate.swift; path = Classes/UATagPreferencesDelegate.swift; sourceTree = "<group>"; };
 		82E26E001E76BD25007EA1F0 /* UATagPreferenceCenterStyle.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = UATagPreferenceCenterStyle.plist; path = UATagPreferenceCenter/Resources/UATagPreferenceCenterStyle.plist; sourceTree = "<group>"; };
+		8B290F00381E91DD84C0FB97 /* Pods-UATagPreferenceCenter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UATagPreferenceCenter.release.xcconfig"; path = "Pods/Target Support Files/Pods-UATagPreferenceCenter/Pods-UATagPreferenceCenter.release.xcconfig"; sourceTree = "<group>"; };
+		DF43AE5C218A608600CF7F22 /* UATagPreferenceCellDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UATagPreferenceCellDelegate.swift; path = Classes/UATagPreferenceCellDelegate.swift; sourceTree = "<group>"; };
+		DF43AE5E218A609C00CF7F22 /* UATagPreferenceDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UATagPreferenceDataHandler.swift; path = Classes/UATagPreferenceDataHandler.swift; sourceTree = "<group>"; };
+		DF43AE5F218A609C00CF7F22 /* UATagPreferenceCenterInternal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UATagPreferenceCenterInternal.swift; path = Classes/UATagPreferenceCenterInternal.swift; sourceTree = "<group>"; };
+		DF43AE60218A609C00CF7F22 /* UATagPreferenceCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UATagPreferenceCenter.swift; path = Classes/UATagPreferenceCenter.swift; sourceTree = "<group>"; };
+		DF43AE61218A609C00CF7F22 /* UATagPreferenceCenterStringTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UATagPreferenceCenterStringTypes.swift; path = Classes/UATagPreferenceCenterStringTypes.swift; sourceTree = "<group>"; };
+		F3CE740AB9AF46C98C3E54D2 /* Pods_UATagPreferenceCenter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UATagPreferenceCenter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,18 +55,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCAD43D75A897273CD479B60 /* Pods_UATagPreferenceCenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		276311B8D30787D11592406E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F3CE740AB9AF46C98C3E54D2 /* Pods_UATagPreferenceCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		46B7DB76C487A83AD9F66199 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0E4E2DC3F5B1848AF9F8213E /* Pods-UATagPreferenceCenter.debug.xcconfig */,
+				8B290F00381E91DD84C0FB97 /* Pods-UATagPreferenceCenter.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8229A0231E55C9B1005F226F = {
 			isa = PBXGroup;
 			children = (
 				8229A0491E55CA3E005F226F /* Resources */,
 				8229A02F1E55C9B1005F226F /* UATagPreferenceCenter */,
 				8229A02E1E55C9B1005F226F /* Products */,
+				46B7DB76C487A83AD9F66199 /* Pods */,
+				276311B8D30787D11592406E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,10 +101,14 @@
 		8229A02F1E55C9B1005F226F /* UATagPreferenceCenter */ = {
 			isa = PBXGroup;
 			children = (
+				8229A03A1E55CA2D005F226F /* UATagPreference.swift */,
+				DF43AE5C218A608600CF7F22 /* UATagPreferenceCellDelegate.swift */,
+				DF43AE60218A609C00CF7F22 /* UATagPreferenceCenter.swift */,
+				DF43AE5F218A609C00CF7F22 /* UATagPreferenceCenterInternal.swift */,
+				DF43AE61218A609C00CF7F22 /* UATagPreferenceCenterStringTypes.swift */,
+				DF43AE5E218A609C00CF7F22 /* UATagPreferenceDataHandler.swift */,
 				825AEE751E8930BB00D7B7F7 /* UATagPreferencesDelegate.swift */,
-				8229A03A1E55CA2D005F226F /* UATagPreferences.swift */,
 				821E2CC91E65B28500D684BB /* UATagPreferencesStyle.swift */,
-				8229A03B1E55CA2D005F226F /* UATagPreferencesInternal.swift */,
 				8229A03C1E55CA2D005F226F /* UATagPreferencesOpenAction.swift */,
 				8229A03D1E55CA2D005F226F /* UATagPreferencesSaveAction.swift */,
 				8229A03F1E55CA2D005F226F /* UATagPreferencesViewCell.swift */,
@@ -119,6 +155,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8229A0351E55C9B1005F226F /* Build configuration list for PBXNativeTarget "UATagPreferenceCenter" */;
 			buildPhases = (
+				72336F722972C27FE3DAFF8F /* [CP] Check Pods Manifest.lock */,
 				8229A0281E55C9B1005F226F /* Sources */,
 				8229A0291E55C9B1005F226F /* Frameworks */,
 				8229A02A1E55C9B1005F226F /* Headers */,
@@ -139,12 +176,12 @@
 		8229A0241E55C9B1005F226F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = UrbanAirship;
 				TargetAttributes = {
 					8229A02C1E55C9B1005F226F = {
 						CreatedOnToolsVersion = 8.2.1;
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -179,19 +216,44 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		72336F722972C27FE3DAFF8F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UATagPreferenceCenter-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8229A0281E55C9B1005F226F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF43AE5D218A608600CF7F22 /* UATagPreferenceCellDelegate.swift in Sources */,
 				825AEE761E8930BB00D7B7F7 /* UATagPreferencesDelegate.swift in Sources */,
 				8229A0451E55CA2D005F226F /* UATagPreferencesSaveAction.swift in Sources */,
+				DF43AE62218A609C00CF7F22 /* UATagPreferenceDataHandler.swift in Sources */,
 				8229A0471E55CA2D005F226F /* UATagPreferencesViewCell.swift in Sources */,
 				8229A0441E55CA2D005F226F /* UATagPreferencesOpenAction.swift in Sources */,
+				DF43AE64218A609C00CF7F22 /* UATagPreferenceCenter.swift in Sources */,
 				8229A0481E55CA2D005F226F /* UATagPreferencesViewController.swift in Sources */,
-				8229A0431E55CA2D005F226F /* UATagPreferencesInternal.swift in Sources */,
 				821E2CCA1E65B28500D684BB /* UATagPreferencesStyle.swift in Sources */,
-				8229A0421E55CA2D005F226F /* UATagPreferences.swift in Sources */,
+				8229A0421E55CA2D005F226F /* UATagPreference.swift in Sources */,
+				DF43AE63218A609C00CF7F22 /* UATagPreferenceCenterInternal.swift in Sources */,
+				DF43AE65218A609C00CF7F22 /* UATagPreferenceCenterStringTypes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,15 +269,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -260,15 +330,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -299,6 +377,7 @@
 		};
 		8229A0361E55C9B1005F226F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E4E2DC3F5B1848AF9F8213E /* Pods-UATagPreferenceCenter.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -315,12 +394,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
 		8229A0371E55C9B1005F226F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B290F00381E91DD84C0FB97 /* Pods-UATagPreferenceCenter.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -336,7 +417,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = UrbanAirship.UATagPreferenceCenter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};

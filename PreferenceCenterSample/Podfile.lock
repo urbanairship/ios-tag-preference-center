@@ -1,0 +1,24 @@
+PODS:
+  - UrbanAirship-iOS-SDK (10.0.3)
+  - UrbanAirship-iOS-Tag-Preference-Center (1.2.0):
+    - UrbanAirship-iOS-SDK (>= 9.0)
+
+DEPENDENCIES:
+  - UrbanAirship-iOS-SDK
+  - UrbanAirship-iOS-Tag-Preference-Center (from `..`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - UrbanAirship-iOS-SDK
+
+EXTERNAL SOURCES:
+  UrbanAirship-iOS-Tag-Preference-Center:
+    :path: ".."
+
+SPEC CHECKSUMS:
+  UrbanAirship-iOS-SDK: 1ae7e6533a0b4798f0085eff5895a63df96efc9e
+  UrbanAirship-iOS-Tag-Preference-Center: 1c1b8e9f0e5f01f3b9a398fd5a9cf5f13aa5233c
+
+PODFILE CHECKSUM: a5cfb9d17783e34af2cf210f33133e2f8751b548
+
+COCOAPODS: 1.5.3

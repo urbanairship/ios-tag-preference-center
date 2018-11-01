@@ -4,7 +4,7 @@ A native out of the box preference center that presents the user with a list of 
 
 ## Requirements
 
-Xcode 8.0+ is required for all projects and the SDK. Projects must target >= iOS8.
+Xcode 10.0+ is required for all projects and the SDK. Projects must target >= iOS10.
 
 ### Installation
 
