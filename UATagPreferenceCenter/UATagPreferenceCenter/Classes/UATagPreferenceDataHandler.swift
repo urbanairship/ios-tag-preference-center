@@ -40,7 +40,7 @@ class UATagPreferenceDataHandler {
             dataTask?.cancel()
         }
         
-        let url = URL(string: "https://\(UAirship.shared().config.appKey!):\(UAirship.shared().config.appSecret!)@go.urbanairship.com/api/\(endPoint.channel.rawValue)/\(UAirship.push().channelID!)")!
+        let url = URL(string: "https://\(UAirship.shared().config.appKey):\(UAirship.shared().config.appSecret)@go.urbanairship.com/api/\(endPoint.channel.rawValue)/\(UAirship.push().channelID!)")!
         let shouldPerformRequest = true
         
         if shouldPerformRequest == true {
