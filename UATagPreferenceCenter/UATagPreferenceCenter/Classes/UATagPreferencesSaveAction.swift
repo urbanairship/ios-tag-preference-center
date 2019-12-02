@@ -2,7 +2,7 @@
  Copyright 2017 Urban Airship and Contributors
  */
 
-import AirshipKit
+import Airship
 
 /**
  * Updates the preference center with new tag preference data provided in a push notification
@@ -15,7 +15,7 @@ class UATagPreferencesSaveAction: UAAction {
         return (arguments.situation == .backgroundPush || arguments.situation == .foregroundPush || arguments.situation == .manualInvocation || arguments.situation == .foregroundInteractiveButton || arguments.situation == .launchedFromPush)
     }
     
-    open override func perform(with arguments: UAActionArguments, completionHandler: @escaping AirshipKit.UAActionCompletionHandler) {
+    open override func perform(with arguments: UAActionArguments, completionHandler: @escaping Airship.UAActionCompletionHandler) {
         
         var jsonDict: NSDictionary?
         

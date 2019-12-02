@@ -2,7 +2,7 @@
  Copyright 2017 Urban Airship and Contributors
  */
 
-import AirshipKit
+import Airship
 
 class UATagPreferenceDataHandler {
     

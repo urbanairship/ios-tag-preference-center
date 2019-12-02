@@ -3,7 +3,7 @@
  */
 
 import Foundation
-import AirshipKit
+import Airship
 
 class UATagPreferenceCenterInternal {
     

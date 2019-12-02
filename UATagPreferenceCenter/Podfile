@@ -1,8 +1,8 @@
 use_frameworks!
 
 def tag_preference_center
-  platform :ios, '10.0'
-  pod 'UrbanAirship-iOS-SDK'
+  platform :ios, '11.0'
+  pod 'Airship'
 end
 
 target 'UATagPreferenceCenter' do
