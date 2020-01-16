@@ -2,7 +2,7 @@
  Copyright 2017 Urban Airship and Contributors
  */
 
-import AirshipKit
+import Airship
 
 class UATagPreferenceDataHandler {
     
@@ -40,7 +40,8 @@ class UATagPreferenceDataHandler {
             dataTask?.cancel()
         }
         
-        let url = URL(string: "https://\(UAirship.shared().config.appKey!):\(UAirship.shared().config.appSecret!)@go.urbanairship.com/api/\(endPoint.channel.rawValue)/\(UAirship.push().channelID!)")!
+        let url = URL(string: "https://\(UAirship.shared().config.appKey):\(UAirship.shared().config.appSecret)@go.urbanairship.com/api/\(endPoint.channel.rawValue)/\(UAirship.channel().identifier!)")!
+
         let shouldPerformRequest = true
         
         if shouldPerformRequest == true {
@@ -86,7 +87,7 @@ class UATagPreferenceDataHandler {
             self.prepareDeviceTagGroupData()
         } else {
             // sort data for device tags
-            self.allDeviceTagGroupsAndTags[UATagPreferenceCenterInternal.deviceGroup] = UAirship.push().tags
+            self.allDeviceTagGroupsAndTags[UATagPreferenceCenterInternal.deviceGroup] = UAirship.channel().tags
         }
         
         self.comparePreferenceAndDeviceTags()

@@ -2,7 +2,7 @@
  Copyright 2017 Urban Airship and Contributors
  */
 
-import AirshipKit
+import Airship
 
 /**
  * Opens the preference center from a push notification containing a list of tag preferences
@@ -17,7 +17,7 @@ class UATagPreferencesOpenAction: UAAction {
         return (arguments.situation == .backgroundPush || arguments.situation == .manualInvocation || arguments.situation == .foregroundInteractiveButton || arguments.situation == .launchedFromPush)
     }
     
-    open override func perform(with arguments: UAActionArguments, completionHandler: @escaping AirshipKit.UAActionCompletionHandler) {
+    open override func perform(with arguments: UAActionArguments, completionHandler: @escaping Airship.UAActionCompletionHandler) {
         
         var jsonDict: NSDictionary?
         

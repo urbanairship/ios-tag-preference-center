@@ -3,7 +3,7 @@
  */
 
 import Foundation
-import AirshipKit
+import Airship
 
 class UATagPreferenceCenterInternal {
     
@@ -39,9 +39,9 @@ class UATagPreferenceCenterInternal {
     
     func addPreference(named: String, tagGroup: String) {
         if tagGroup != UATagPreferenceCenterInternal.deviceGroup {
-            UAirship.push().addTags([named], group: tagGroup)
+            UAirship.channel().addTags([named], group: tagGroup)
         } else {
-            UAirship.push().addTag(named)
+            UAirship.channel().addTag(named)
         }
         
         UAirship.push().updateRegistration()
@@ -49,9 +49,9 @@ class UATagPreferenceCenterInternal {
     
     func removePreference(named: String, tagGroup: String) {
         if tagGroup != UATagPreferenceCenterInternal.deviceGroup {
-            UAirship.push().removeTags([named], group: tagGroup)
+            UAirship.channel().removeTags([named], group: tagGroup)
         } else {
-            UAirship.push().removeTag(named)
+            UAirship.channel().removeTag(named)
         }
         
         UAirship.push().updateRegistration()

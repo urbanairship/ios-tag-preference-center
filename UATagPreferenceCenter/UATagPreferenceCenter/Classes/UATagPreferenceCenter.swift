@@ -3,7 +3,7 @@
  */
 
 import Foundation
-import AirshipKit
+import Airship
 
 /**
  Manages the setup and display of a preference center view that can be called at any point
